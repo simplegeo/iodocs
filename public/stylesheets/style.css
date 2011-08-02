@@ -298,52 +298,54 @@ li {
   margin-left: 0;
 }
 
-.credentials {
-  background-color: #f4f4e1;
-  border: 1px solid #cbcb71;
+form .text {border: 1px solid #D9D8D0;background-color:#F7F6EF;padding:9px 9px 10px;font-size:16px;line-height:20px;}
+
+#credentials {
+  background-color: #E1F7CA;
+  border: 1px solid #CBE2B3;
   overflow: hidden;
   *zoom: 1;
-  padding: 15px;
+  padding: 25px;
+  margin: 20px 0;
+  color:#718755;
 }
 
-.credentials.authed {
+#credentials.authed {
   background-color: #d6f6bd;
   border-color: #86bf6a;
   padding: 10px;
 }
 
-.credentials.authed form {
+#credentials.authed form {
   display: none;
 }
 
-.credentials img {
-  margin-left: 10px;
-}
-
-.credentials h2 {
+#credentials h2 {
   margin-bottom: 0;
 }
 
-.credentials div {
+#credentials div {
   float: left;
   margin-right: 15px;
 }
 
-.credentials form {
+#credentials form {
   margin-top: 10px;
 }
 
-.credentials label {
+#credentials label {
   font-weight: bold;
   display: block;
   margin-bottom: 3px;
 }
 
-.credentials input {
-  width: 200px;
+#credentials input {
+  width: 415px;
 }
 
-.credentials #oauth-auth {
+#credentials .secret {margin:0;}
+
+#credentials #oauth-auth {
   margin-top: 20px;
 }
 

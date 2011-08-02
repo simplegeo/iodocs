@@ -20,9 +20,6 @@ div(class='wrapper content')
                  span Authenticated with OAuth
                  img(src='/images/accept.png')
              - else
-                 h2 API Credentials
-                   img(src='/images/key.png')
-    
                  - if (apiInfo.oauth)
                      input(type='hidden', name='oauth', value='authrequired')
     
@@ -35,13 +32,13 @@ div(class='wrapper content')
                      - var defaultSecret =apiInfo.auth.defaultSecret
                  - else
                      - var defaultSecret =''
-                 div
-                     label(for='key') API Key
-                     input(id='key', name='key', value=defaultKey, style='color=#EEEEEE')
-                 div
+                 div.key
+                     label(for='key') OAuth Key
+                     input(id='key', name='key', type='text', class='text', value=defaultKey, style='color=#EEEEEE')
+                 div.secret
                      - if (apiInfo.oauth || apiInfo.signature)
-                         label(for='secret') Shared Secret
-                         input(id='secret', name='secret', value=defaultSecret, style='color=#EEEEEE')
+                         label(for='secret') OAuth Secret
+                         input(id='secret', name='secret', type='text', class='text', value=defaultSecret, style='color=#EEEEEE')
                  - if (apiInfo.oauth && apiInfo.oauth.type !='two-legged')
                      div
                         input(name='oauth', value='Authenticate with OAuth', type='submit', id='oauth-auth')
