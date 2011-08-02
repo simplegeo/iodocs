@@ -90,11 +90,6 @@ select {
   vertical-align: middle;
 }
 
-body {
-  font: 13px/1.231 sans-serif;
-  *font-size: small;
-}
-
 select,
 input,
 textarea,
@@ -277,12 +272,6 @@ html {
   height: 100%;
 }
 
-body {
-  width: 960px;
-  margin: 15px auto;
-  padding-bottom: 20px;
-}
-
 h1 {
   font-size: 24px;
   line-height: 1.5;
@@ -312,12 +301,6 @@ li {
 .credentials {
   background-color: #f4f4e1;
   border: 1px solid #cbcb71;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
   overflow: hidden;
   *zoom: 1;
   padding: 15px;
