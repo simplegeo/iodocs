@@ -34,11 +34,11 @@ div(class='wrapper content')
                      - var defaultSecret =''
                  div.key
                      label(for='key') OAuth Key
-                     input(id='key', name='key', type='text', class='text', value=defaultKey, style='color=#EEEEEE')
+                     input(id='key', name='key', type='text', class='text code', value=defaultKey, style='color=#EEEEEE')
                  div.secret
                      - if (apiInfo.oauth || apiInfo.signature)
                          label(for='secret') OAuth Secret
-                         input(id='secret', name='secret', type='text', class='text', value=defaultSecret, style='color=#EEEEEE')
+                         input(id='secret', name='secret', type='text', class='text code', value=defaultSecret, style='color=#EEEEEE')
                  - if (apiInfo.oauth && apiInfo.oauth.type !='two-legged')
                      div
                         input(name='oauth', value='Authenticate with OAuth', type='submit', id='oauth-auth')
@@ -46,9 +46,9 @@ div(class='wrapper content')
     div(id='controls')
         ul
             li
-                a#toggle-endpoints(href='#') Toggle All Endpoints
+                a#toggle-endpoints(href='#') Toggle Endpoints
             li
-                a#toggle-methods(href='#') Toggle All Methods
+                a#toggle-methods(href='#') Toggle Methods
     
     ul
         - each endpoint in apiDefinition.endpoints

@@ -299,6 +299,7 @@ li {
 }
 
 form .text {border: 1px solid #D9D8D0;background-color:#F7F6EF;padding:9px 9px 10px;font-size:16px;line-height:20px;}
+form .code {font-family:"Courier New";letter-spacing:3px;}
 
 #credentials {
   background-color: #E1F7CA;
