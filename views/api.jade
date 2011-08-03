@@ -46,9 +46,9 @@ div(class='wrapper content')
     div(id='controls')
         ul
             li
-                a#toggle-endpoints(href='#') Toggle Endpoints
+                a#toggle-endpoints(href='#', class='button') Toggle Endpoints
             li
-                a#toggle-methods(href='#') Toggle Methods
+                a#toggle-methods(href='#', class='button') Toggle Methods
     
     ul
         - each endpoint in apiDefinition.endpoints
@@ -57,9 +57,9 @@ div(class='wrapper content')
                     span.name=endpoint.name
                     ul.actions
                         li.list-methods
-                            a(href='#') List Methods
+                            a(href='#', class='button') List Methods
                         li.expand-methods
-                            a(href='#') Expand Methods
+                            a(href='#', class='button') Expand Methods
                 - if (endpoint.methods.length)
                 ul.methods.hidden
                     - each method in endpoint.methods

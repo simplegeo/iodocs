@@ -108,25 +108,6 @@ html {
   overflow-y: scroll;
 }
 
-a:link {
-  -webkit-tap-highlight-color: #ff5e99;
-}
-
-a:hover,
-a:active {
-  outline: none;
-}
-
-a,
-a:active,
-a:visited {
-  color: #607890;
-}
-
-a:hover {
-  color: #036;
-}
-
 ul,
 ol {
   margin-left: 2em;
@@ -228,12 +209,6 @@ button::-moz-focus-inner {
 
 input:invalid,
 textarea:invalid {
-  -moz-border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -o-border-radius: 1px;
-  -ms-border-radius: 1px;
-  -khtml-border-radius: 1px;
-  border-radius: 1px;
   -moz-box-shadow: 0, 0, 5px, red;
   -webkit-box-shadow: 0, 0, 5px, red;
   -o-box-shadow: 0, 0, 5px, red;
@@ -307,7 +282,7 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
   overflow: hidden;
   *zoom: 1;
   padding: 25px;
-  margin: 20px 0;
+  margin: 20px 0 0;
   color:#718755;
 }
 
@@ -353,10 +328,7 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 #controls {
   overflow: hidden;
   *zoom: 1;
-  margin-top: 10px;
-  border: 1px solid #999;
-  border-width: 1px 0;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 #controls li {
@@ -366,14 +338,12 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 
 #controls li:not(:first-child) {
   padding-left: 10px;
-  border-left: 1px solid #ddd;
 }
 
 .endpoint {
   margin: 0;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #eee;
   overflow: hidden;
+  border-bottom:1px solid #464646;
   *zoom: 1;
   -moz-transition-property: background-color;
   -webkit-transition-property: background-color;
@@ -389,19 +359,20 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
   transition-timing-function: ease;
 }
 
-.endpoint.expanded {
-  background-color: #fff;
-}
-
 .endpoint > .title {
-  font-weight: normal;
-  padding: 20px 0 10px 10px;
+  background-color:#555;
+  color:#ccc;
+  font-weight: bold;
+  padding: 20px;
   overflow: hidden;
   *zoom: 1;
 }
 
+.endpoint > .title {font-size:150%;}
+.endpoint > .title span {padding-top:5px;}
+
 .endpoint > .title .name {
-  font-size: 18px;
+  font-size: 24px;
   float: left;
 }
 
@@ -417,7 +388,6 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 .endpoint > .title .actions li {
   float: left;
   padding: 0 10px;
-  border-left: 1px solid #ddd;
 }
 
 .endpoint > .title .actions li:first-child {
@@ -429,15 +399,10 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 }
 
 .method {
-  font-size: 14px;
-  border: 1px solid #eee;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  margin: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 0;
   /*    &.authrequired .http-method {
           background-image: url(/images/lock.png);
           background-repeat: no-repeat;
@@ -481,16 +446,10 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 
 .method .title {
   overflow: hidden;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
 }
 
 .method .title:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(228, 240, 243, 0.8);
   cursor: pointer;
 }
 
@@ -504,7 +463,7 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 
 .method .title span {
   margin: 0 10px 0;
-  line-height: 33px;
+  line-height: 45px;
   float: left;
 }
 
@@ -529,14 +488,8 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
   text-align: center;
   margin: 0;
   font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Bitstream Vera Mono', monospace;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
   color: #fff;
-  line-height: 33px;
+  line-height: 45px;
   float: left;
 }
 
@@ -622,16 +575,16 @@ form .code {font-family:"Courier New";letter-spacing:3px;}
 }
 
 .get {
-  background: #e7f0f7;
-  border-color: #aecce4;
+  background: rgba(228, 240, 243, 0.8);
+  border-color:#D1E3E8;
 }
 
 .get .http-method {
-  background-color: #0061ac;
+  background-color: #ACBFC5;
 }
 
 .get th, .get td {
-  border-bottom: 1px solid #9ac0de;
+  border-bottom: 1px solid #D1E3E8;
 }
 
 .post {
