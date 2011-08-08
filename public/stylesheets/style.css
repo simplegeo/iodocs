@@ -90,11 +90,6 @@ select {
   vertical-align: middle;
 }
 
-body {
-  font: 13px/1.231 sans-serif;
-  *font-size: small;
-}
-
 select,
 input,
 textarea,
@@ -111,25 +106,6 @@ samp {
 
 html {
   overflow-y: scroll;
-}
-
-a:link {
-  -webkit-tap-highlight-color: #ff5e99;
-}
-
-a:hover,
-a:active {
-  outline: none;
-}
-
-a,
-a:active,
-a:visited {
-  color: #607890;
-}
-
-a:hover {
-  color: #036;
 }
 
 ul,
@@ -233,12 +209,6 @@ button::-moz-focus-inner {
 
 input:invalid,
 textarea:invalid {
-  -moz-border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -o-border-radius: 1px;
-  -ms-border-radius: 1px;
-  -khtml-border-radius: 1px;
-  border-radius: 1px;
   -moz-box-shadow: 0, 0, 5px, red;
   -webkit-box-shadow: 0, 0, 5px, red;
   -o-box-shadow: 0, 0, 5px, red;
@@ -277,12 +247,6 @@ html {
   height: 100%;
 }
 
-body {
-  width: 960px;
-  margin: 15px auto;
-  padding-bottom: 20px;
-}
-
 h1 {
   font-size: 24px;
   line-height: 1.5;
@@ -309,68 +273,62 @@ li {
   margin-left: 0;
 }
 
-.credentials {
-  background-color: #f4f4e1;
-  border: 1px solid #cbcb71;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
+form .text {border: 1px solid #D9D8D0;background-color:#F7F6EF;padding:9px 9px 10px;font-size:16px;line-height:20px;}
+form .code {font-family:"Courier New";letter-spacing:3px;}
+
+#credentials {
+  background-color: #E1F7CA;
+  border: 1px solid #CBE2B3;
   overflow: hidden;
   *zoom: 1;
-  padding: 15px;
+  padding: 25px;
+  margin: 20px 0 0;
+  color:#718755;
 }
 
-.credentials.authed {
+#credentials.authed {
   background-color: #d6f6bd;
   border-color: #86bf6a;
   padding: 10px;
 }
 
-.credentials.authed form {
+#credentials.authed form {
   display: none;
 }
 
-.credentials img {
-  margin-left: 10px;
-}
-
-.credentials h2 {
+#credentials h2 {
   margin-bottom: 0;
 }
 
-.credentials div {
+#credentials div {
   float: left;
   margin-right: 15px;
 }
 
-.credentials form {
+#credentials form {
   margin-top: 10px;
 }
 
-.credentials label {
+#credentials label {
   font-weight: bold;
   display: block;
   margin-bottom: 3px;
 }
 
-.credentials input {
-  width: 200px;
+#credentials input {
+  width: 415px;
 }
 
-.credentials #oauth-auth {
+#credentials .secret {margin:0;}
+
+#credentials #oauth-auth {
   margin-top: 20px;
 }
 
 #controls {
   overflow: hidden;
   *zoom: 1;
-  margin-top: 10px;
-  border: 1px solid #999;
-  border-width: 1px 0;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 #controls li {
@@ -380,14 +338,12 @@ li {
 
 #controls li:not(:first-child) {
   padding-left: 10px;
-  border-left: 1px solid #ddd;
 }
 
 .endpoint {
   margin: 0;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #eee;
   overflow: hidden;
+  border-bottom:1px solid #464646;
   *zoom: 1;
   -moz-transition-property: background-color;
   -webkit-transition-property: background-color;
@@ -403,19 +359,20 @@ li {
   transition-timing-function: ease;
 }
 
-.endpoint.expanded {
-  background-color: #fff;
-}
-
 .endpoint > .title {
-  font-weight: normal;
-  padding: 20px 0 10px 10px;
+  background-color:#555;
+  color:#ccc;
+  font-weight: bold;
+  padding: 20px;
   overflow: hidden;
   *zoom: 1;
 }
 
+.endpoint > .title {font-size:150%;}
+.endpoint > .title span {padding-top:5px;}
+
 .endpoint > .title .name {
-  font-size: 18px;
+  font-size: 24px;
   float: left;
 }
 
@@ -431,7 +388,6 @@ li {
 .endpoint > .title .actions li {
   float: left;
   padding: 0 10px;
-  border-left: 1px solid #ddd;
 }
 
 .endpoint > .title .actions li:first-child {
@@ -443,15 +399,10 @@ li {
 }
 
 .method {
-  font-size: 14px;
-  border: 1px solid #eee;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  margin: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 0;
   /*    &.authrequired .http-method {
           background-image: url(/images/lock.png);
           background-repeat: no-repeat;
@@ -495,16 +446,10 @@ li {
 
 .method .title {
   overflow: hidden;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
 }
 
 .method .title:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(228, 240, 243, 0.8);
   cursor: pointer;
 }
 
@@ -518,7 +463,7 @@ li {
 
 .method .title span {
   margin: 0 10px 0;
-  line-height: 33px;
+  line-height: 45px;
   float: left;
 }
 
@@ -543,14 +488,8 @@ li {
   text-align: center;
   margin: 0;
   font-family: 'Inconsolata', 'Monaco', 'Consolas', 'Bitstream Vera Mono', monospace;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
   color: #fff;
-  line-height: 33px;
+  line-height: 45px;
   float: left;
 }
 
@@ -636,16 +575,16 @@ li {
 }
 
 .get {
-  background: #e7f0f7;
-  border-color: #aecce4;
+  background: rgba(228, 240, 243, 0.8);
+  border-color:#D1E3E8;
 }
 
 .get .http-method {
-  background-color: #0061ac;
+  background-color: #ACBFC5;
 }
 
 .get th, .get td {
-  border-bottom: 1px solid #9ac0de;
+  border-bottom: 1px solid #D1E3E8;
 }
 
 .post {
