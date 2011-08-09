@@ -1,7 +1,43 @@
 {
    "endpoints":[
       {
-         "name":"Context",
+         "name":"SimpleGeo Storage",
+         "path":"/0.1/records",
+         "methods":[
+            {
+               "MethodName":"getNearbyRecords",
+               "Synopsis":"Retrieve context information for the location. ",
+               "HTTPMethod":"GET",
+               "URI":"/0.1/records/:layer/nearby/:lat,:lon.json",
+               "RequiresOAuth":"Y",
+               "parameters":[
+                  {
+                     "Name":"layer",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Layer name"
+                  },
+                  {
+                     "Name":"lat",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"coorindate",
+                     "Description":"Latitudinal coordinate"
+                  },
+                  {
+                     "Name":"lon",
+                     "Required":"Y",
+                     "Default":"",
+                     "Type":"coordinate",
+                     "Description":"Longitudinal coordinate"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "name":"SimpleGeo Context",
          "path":"/1.0/context",
          "methods":[
             {
@@ -24,6 +60,13 @@
                      "Default":"",
                      "Type":"coordinate",
                      "Description":"Longitudinal coordinate"
+                  },
+                  {
+                     "Name":"filter",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Filter out sections of a Context response"
                   }
                ]
             },
@@ -40,6 +83,13 @@
                      "Default":"",
                      "Type":"string",
                      "Description":"Full street address, ZIP code required"
+                  },
+                  {
+                     "Name":"filter",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Filter out sections of a Context response"
                   }
                ]
             },
@@ -56,6 +106,13 @@
                      "Default":"",
                      "Type":"IPv4 address",
                      "Description":"Dot-decimal notation IPv4 address (e.g. 4.2.2.2)"
+                  },
+                  {
+                     "Name":"filter",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Filter out sections of a Context response"
                   }
                ]
             },
@@ -66,13 +123,20 @@
                "URI":"/1.0/context/ip.json",
                "RequiresOAuth":"Y",
                "parameters":[
+                  {
+                     "Name":"filter",
+                     "Required":"N",
+                     "Default":"",
+                     "Type":"string",
+                     "Description":"Filter out sections of a Context response"
+                  }
 
                ]
             }
          ]
       },
       {
-         "name":"Places",
+         "name":"SimpleGeo Places",
          "methods":[
             {
                "MethodName":"search",
@@ -270,7 +334,7 @@
          ]
       },
       {
-         "name":"Features",
+         "name":"SimpleGeo Features",
          "methods":[
             {
                "MethodName":"getFeatureCategories",
